@@ -12,7 +12,7 @@ def main():
     for p in _HERE.parent.glob("jour*.html"):
         full_url = base_url + p.name
         img = qrcode.make(full_url)
-        img.save(_HERE.parent / "qr_codes" / ("qr_code" + p.stem + ".png"))
+        img.save(_HERE.parent / "qr_codes" / ("qr_code_" + p.stem + ".png"))
 
 
 if __name__ == "__main__":
